@@ -16,7 +16,9 @@ app.post('/api/sum', (req, res) => {
         return res.status(400).json({ error: 'Invalid input, Please provide two numbers.' });
     }
     const sum = number1 + number2;
-    res.json({ sum });
+    res.json({ 
+        result: sum,
+        message: 'Calculation successful' });
 });
 
 // Start the server
